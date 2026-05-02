@@ -181,7 +181,7 @@ app.delete("/admin/:id", async(req,res)=>{
   }
 });
 
-const PORT = 2000;
+const PORT = process.env.PORT || 2000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

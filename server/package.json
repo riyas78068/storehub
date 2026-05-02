@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "postinstall": "chmod +x node_modules/.bin/prisma generate" 
-   }, 
+    "postinstall": "prisma generate"
+  }, 
   "keywords": [],
   "author": "",
   "license": "ISC",
