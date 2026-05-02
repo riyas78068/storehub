@@ -12,7 +12,6 @@ app.use(express.json());
 const prisma = new PrismaClient();
 
 
-
 //POSt methode for register
 app.post("/register",async (req, res) => {
  
