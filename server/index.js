@@ -11,10 +11,7 @@ app.use(cors());
 app.use(express.json());
 const prisma = new PrismaClient();
 
-app.get("/", async (req, res) => {
-  const data = await prisma.login.findMany();
-  res.send(data);
-})
+
 
 //POSt methode for register
 app.post("/register",async (req, res) => {
