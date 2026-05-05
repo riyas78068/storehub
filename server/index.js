@@ -3,7 +3,6 @@ const {PrismaClient} = require("@prisma/client")
 const bcrypt = require('bcrypt');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
-const path = require('path');
 
 const app = express();
 
@@ -12,7 +11,6 @@ app.use(cors());
 app.use(express.json());
 const prisma = new PrismaClient();
 
-app.use(express.static(path.join(__dirname, '../client/vite-project/dist')));
 
 //POSt methode for register
 app.post("/register",async (req, res) => {
@@ -181,9 +179,6 @@ app.delete("/admin/:id", async(req,res)=>{
   } catch (error) {
     res.status(500).json({message: "Error deleting product", error: error.message});
   }
-});
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/vite-project/dist/index.html'));
 });
 
 const PORT = process.env.PORT || 2000;
