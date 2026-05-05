@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:2000';
+const API_URL = 'https://storehub-767w.vercel.app/';
 
 export const authService = {
   // Register a new user

@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:2000";
+const BASE_URL = "https://storehub-767w.vercel.app/";
 
 // Get all products
 export const getAllProducts = async () => {
