@@ -14,12 +14,13 @@ import { getAllProducts } from '../services/productService'
   const fetchProducts = async () => {
     try {
       const response = await getAllProducts()
-      const allProducts = response.data || []
+      console.log('API Response:', response)
+      const allProducts = Array.isArray(response) ? response : (response?.data || [])
       // Show only first 3 products as featured
       setProducts(allProducts.slice(0, 3))
     } catch (err) {
       setError('Failed to load featured products')
-      console.error(err)
+      console.error('Fetch error:', err)
     } finally {
       setLoading(false)
     }

@@ -11,7 +11,10 @@ app.use(cors());
 app.use(express.json());
 const prisma = new PrismaClient();
 
-
+app.get("/", (req, res) => {
+  const data = prisma.login.findMany();
+  res.status(200).json({message: "Welcome to the API", data});
+});
 //POSt methode for register
 app.post("/register",async (req, res) => {
  
