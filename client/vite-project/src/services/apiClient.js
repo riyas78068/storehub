@@ -1,6 +1,6 @@
 import { authService } from './authService';
 
-const API_URL = "http://localhost:2000"; // Change this to your server URL
+const API_URL = "https://storehub-767w.vercel.app/"; // Change this to your server URL
 
 class ApiClient {
   constructor(baseURL) {
